@@ -22,7 +22,7 @@ export default function GraduatesDetail() {
                     <h2>{van.studentFullName}</h2>
                     <p className="van-price"><span>{van.cgpa}</span></p>
                     <p>{van.institutionName}</p>
-                    <button className="link-button">need Authenticate</button>
+                    <button className="link-button">Need Authenticate</button>
                 </div>
             ) : <h2>Loading...</h2>}
         </div>

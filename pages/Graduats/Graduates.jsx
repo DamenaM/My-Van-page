@@ -8,7 +8,13 @@ export default function Graduates() {
             .then(res => res.json())
             .then(data => setVans(data.vans))
     }, [])
-
+    let starIcon = vans.isAccredited ? "star-empty.png" : "star-filled.png"
+     function toggleFavorite() {
+        setVans(prevContact => ({
+            ...prevContact,
+            isAccredited: !prevContact.isAccredited
+        }))
+    }
     const vanElements = vans.map(van => (
         <div key={van.studentNationalId} className="van-tile">
             <Link to={`/Graduats/${van.studentNationalId}`}>
@@ -17,6 +23,12 @@ export default function Graduates() {
                     <h3>{van.studentFullName}</h3>
                     <p>Result=<span>{van.cgpa}</span></p>
                 </div>
+                <img 
+                        src={`../assets/images/${starIcon}`} 
+                        className="card--favorite"
+                        onClick={toggleFavorite}
+                    />
+
                 <i className={`van-type ${van.isAccredited} selected`}>{van.isAccredited}</i>
             </Link>
         </div>
