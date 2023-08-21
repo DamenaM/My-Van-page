@@ -10,14 +10,14 @@ export default function Graduates() {
     }, [])
 
     const vanElements = vans.map(van => (
-        <div key={van.id} className="van-tile">
-            <Link to={`/Graduats/${van.id}`}>
-                <img src={van.imageUrl} />
+        <div key={van.studentNationalId} className="van-tile">
+            <Link to={`/Graduats/${van.studentNationalId}`}>
+                <img src="../assets/images/user1.png" />
                 <div className="van-info">
-                    <h3>{van.name}</h3>
+                    <h3>{van.studentFullName}</h3>
                     <p>Result=<span>{van.cgpa}</span></p>
                 </div>
-                <i className={`van-type ${van.type} selected`}>{van.type}</i>
+                <i className={`van-type ${van.isAccredited} selected`}>{van.isAccredited}</i>
             </Link>
         </div>
     ))

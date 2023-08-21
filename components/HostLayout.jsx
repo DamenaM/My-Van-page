@@ -17,8 +17,7 @@ export default function HostLayout() {
                 >
                     Graduates List 
                 </NavLink>
-
-               
+              
             </nav>
             <Outlet />
         </>

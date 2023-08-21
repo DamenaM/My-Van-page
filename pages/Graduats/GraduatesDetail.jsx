@@ -6,23 +6,23 @@ export default function GraduatesDetail() {
     const [van, setVan] = React.useState(null)
 
     React.useEffect(() => {
-        fetch(`/api/Graduats/${params.id}`)
+        fetch(`/api/Graduats/${params.studentNationalId}`)
             .then(res => res.json())
             .then(data => setVan(data.vans))
-    }, [params.id])
+    }, [params.studentNationalId])
 
     return (
         <div className="van-detail-container">
             {van ? (
                 <div className="van-detail">
-                    <img src={van.imageUrl} />
-                    <i className={`van-type ${van.type} selected`}>
-                        {van.type}
+                    <img src="../assets/images/user1.png" />
+                    <i className={`van-type ${van.isAccredited} selected`}>
+                        {van.isAccredited}
                     </i>
-                    <h2>{van.name}</h2>
+                    <h2>{van.studentFullName}</h2>
                     <p className="van-price"><span>{van.cgpa}</span></p>
-                    <p>{van.description}</p>
-                    <button className="link-button">Rent this van</button>
+                    <p>{van.institutionName}</p>
+                    <button className="link-button">need Authenticate</button>
                 </div>
             ) : <h2>Loading...</h2>}
         </div>

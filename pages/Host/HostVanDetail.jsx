@@ -2,7 +2,7 @@ import React from "react"
 import { useParams, Link, NavLink, Outlet } from "react-router-dom"
 
 export default function HostVanDetail() {
-    const { id } = useParams()
+    const { studentNationalId } = useParams()
     const [currentGraduates, setCurrentVan] = React.useState(null)
 
     const activeStyles = {
@@ -12,7 +12,7 @@ export default function HostVanDetail() {
     }
 
     React.useEffect(() => {
-        fetch(`/api/host/Graduats/${id}`)
+        fetch(`/api/host/Graduats/${studentNationalId}`)
             .then(res => res.json())
             .then(data => setCurrentVan(data.vans))
     }, [])
@@ -30,12 +30,12 @@ export default function HostVanDetail() {
 
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
-                    <img src={currentGraduates.imageUrl} />
+                    <img src="../assets/images/user1.png" />
                     <div className="host-van-detail-info-text">
-                        <i   className={`van-type van-type-${currentGraduates.type}`}    >
-                            {currentGraduates.type}
+                        <i   className={`van-type van-type-${currentGraduates.isAccredited}`}    >
+                            {currentGraduates.isAccredited}
                         </i>
-                        <h3>{currentGraduates.name}</h3>
+                        <h3>{currentGraduates.studentFullName}</h3>
                         <h4>Graduate Result ={currentGraduates.cgpa}</h4>
                     </div>
                 </div>
@@ -48,18 +48,12 @@ export default function HostVanDetail() {
                     >
                         Details
                     </NavLink>
-                     <NavLink
-                        to="."
-                        end
-                        style={({ isActive }) => isActive ? activeStyles : null}
-                    >
-                        Department
-                    </NavLink>
+                     
                     <NavLink
                         to="instName"
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
-                        ObtainedCertificate
+                        institution Name
                     </NavLink>
                     <NavLink
                         to="GratuCGPA"

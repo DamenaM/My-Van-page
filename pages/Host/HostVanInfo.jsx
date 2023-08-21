@@ -6,15 +6,17 @@ export default function HostVanInfo() {
     
     return (
         <section className="host-van-detail-info">
-            <h4>studentNationalId: <span>{currentGraduates.id}</span></h4>
-            <h4>studentFullName: <span>{currentGraduates.name}</span></h4>
-            <h4>yearOf_Graduation: <span>{currentGraduates.type}</span></h4>
-            <h4>EndDate: <span>{currentGraduates.type}</span></h4>
-            <h4>obtained_Certificate: <span>{currentGraduates.type}</span></h4>
-            <h4>institutionName: <span>{currentGraduates.type}</span></h4>
-            <h4>studyProgram: <span>{currentGraduates.type}</span></h4>
-            <h4>Description: <span>{currentGraduates.description}</span></h4>
+            <h4>student National Id: <span>{currentGraduates.studentNationalId}</span></h4>
+            <h4>studentFull Name: <span>{currentGraduates.studentFullName}</span></h4>
+            <h4>year Of_Graduation: <span>{currentGraduates.yearOfGraduation}</span></h4>
+            <h4>EndDate: <span>{currentGraduates.endDate}</span></h4>
+            <h4>institution Name: <span>{currentGraduates.institutionName}</span></h4>
+            <h4>studyProgram: <span>{currentGraduates.studyProgram}</span></h4>
+           
+            <h4>Qualification: <span>{currentGraduates.qualification}</span></h4>
             <h4>Visibility: <span>is Accredited</span></h4>
+            <h4>is Accredited: <span>{currentGraduates.isAccredited}</span></h4>
+           
         </section>
     )
 }

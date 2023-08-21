@@ -26,12 +26,12 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="Graduats" element={<Graduates />} />
-          <Route path="Graduats/:id" element={<GraduatesDetail />} />
+          <Route path="Graduats/:studentNationalId" element={<GraduatesDetail />} />
           
           <Route path="host" element={<HostLayout />}>
            
             <Route path="Graduats" element={<HostVans />} />
-            <Route path="Graduats/:id" element={<HostVanDetail />}>
+            <Route path="Graduats/:studentNationalId" element={<HostVanDetail />}>
               <Route index element={<HostVanInfo />} />
               <Route path="GratuCGPA" element={<HostGratuCgpa />} />
               <Route path="instName" element={<HostGraduatesInst />} />
