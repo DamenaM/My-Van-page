@@ -141,7 +141,7 @@ footer {
 
 /*** ABOUT PAGE ***/
 .about-hero-image {
-    max-width: 100%;
+    max-width: 50%;
 }
 
 .about-page-content {
@@ -186,10 +186,13 @@ footer {
 
 .van-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     justify-items: center;
     gap: 34px;
     margin-top: 57px;
+    /* display: grid; */
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
 }
 
 .van-tile a {
@@ -214,7 +217,7 @@ footer {
     font-weight: 500;
     border: none;
     border-radius: 5px;
-    background-color: #FFEAD0;
+    background-color: #355F66;
     color: #4D4D4D;
     transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -286,6 +289,7 @@ i[class*='van-type-'] {
 .van-detail img {
     border-radius: 5px;
     margin-block: 47px;
+    width:58%;
    
 }
 
