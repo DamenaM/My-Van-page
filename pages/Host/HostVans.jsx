@@ -16,9 +16,9 @@ export default function HostVans() {
             className="host-van-link-wrapper"
         >
             <div className="host-van-single" key={van.studentNationalId}>
-                <img src="../assets/images/user1.png" alt={`Photo of ${van.studentFullName}`} />
+                <img src="../assets/images/user1.png" alt={`Photo of ${van.studentNationalId}`} />
                 <div className="host-van-info">
-                    <h3>{van.studentFullName}</h3>
+                <h3>{van.studentFullName}</h3>
                     <p>score={van.cgpa}</p>
                 </div>
             </div>

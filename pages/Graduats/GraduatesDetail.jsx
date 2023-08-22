@@ -16,9 +16,6 @@ export default function GraduatesDetail() {
             {van ? (
                 <div className="van-detail">
                     <img src="../assets/images/user1.png" />
-                    <i className={`van-type ${van.isAccredited} selected`}>
-                        {van.isAccredited}
-                    </i>
                     <h2>{van.studentFullName}</h2>
                     <p className="van-price"><span>{van.cgpa}</span></p>
                     <p>{van.institutionName}</p>

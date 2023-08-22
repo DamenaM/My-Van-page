@@ -10,7 +10,7 @@ export default function Header() {
     
     return (
         <header>
-            <Link className="site-logo" to="/">#Alumni</Link>
+            <Link className="site-logo" to="/">Graduate employees list </Link>
             <nav>
                 <NavLink 
                     to="/host"

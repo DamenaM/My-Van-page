@@ -21,15 +21,13 @@ export default function Graduates() {
                 <img src="../assets/images/user1.png" />
                 <div className="van-info">
                     <h3>{van.studentFullName}</h3>
-                    <p>Result=<span>{van.cgpa}</span></p>
-                </div>
-                <img 
+                    <p><span> <img 
                         src={`../assets/images/${starIcon}`} 
                         className="card--favorite"
                         onClick={toggleFavorite}
-                    />
-
-                <i className={`van-type ${van.isAccredited} selected`}>{van.isAccredited}</i>
+                    />Result= {van.cgpa} </span></p>
+                </div>
+               
             </Link>
         </div>
     ))
