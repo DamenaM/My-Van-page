@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Graduates from "./pages/Graduats/Graduates"
+
 import GraduatesDetail from "./pages/Graduats/GraduatesDetail"
 
 import HostVans from "./pages/Host/HostVans"
@@ -17,6 +18,9 @@ import HostLayout from "./components/HostLayout"
 import HostGratuCgpa from "./pages/Host/HostGratuCgpa"
 
 import "./server"
+import GraduatesFilter from './pages/Graduats/Graduatesfilter';
+
+
 
 function App() {
   return (
@@ -26,6 +30,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="Graduats" element={<Graduates />} />
+          <Route path="Graduatsfilter" element={<GraduatesFilter/>} />
+        
           <Route path="Graduats/:studentNationalId" element={<GraduatesDetail />} />
           
           <Route path="host" element={<HostLayout />}>

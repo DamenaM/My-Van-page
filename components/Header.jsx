@@ -27,6 +27,16 @@ export default function Header() {
                     style={({isActive}) => isActive ? activeStyles : null}   >
                     Graduates 
                 </NavLink>
+                <NavLink 
+                    to="/GraduatsFilter"
+                    style={({isActive}) => isActive ? activeStyles : null}   >
+                    GraduatesFilter 
+                </NavLink>
+                <NavLink 
+                    to="/SearchBarFilter"
+                    style={({isActive}) => isActive ? activeStyles : null}   >
+                    SearchBarFilter 
+                </NavLink>
             </nav>
         </header>
     )

@@ -22,12 +22,19 @@ export default function HostVans() {
                     <p>score={van.cgpa}</p>
                 </div>
             </div>
+            
         </Link>
     ))
 
     return (
+      
+        
+       
         <section>
+                                
             <h1 className="host-vans-title">Your listed Alumni </h1>
+            
+           
             <div className="host-vans-list">
                 {
                     vans.length > 0 ? (
@@ -39,5 +46,6 @@ export default function HostVans() {
                 }
             </div>
         </section>
+        
     )
 }
