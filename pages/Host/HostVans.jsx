@@ -25,6 +25,7 @@ export default function HostVans() {
             
         </Link>
     ))
+// newm
 
     return (
       
@@ -33,8 +34,28 @@ export default function HostVans() {
         <section>
                                 
             <h1 className="host-vans-title">Your listed Alumni </h1>
+<<<<<<< HEAD
             
            
+=======
+            <div className="select">
+                        <select
+                            onChange={(e) => {
+                                setFilterParam(e.target.value);
+                            }}
+                            className="custom-select"
+                            aria-label="Filter Countries By Region"
+                        >
+                            <option value="All">Filter By Region</option>
+                            <option value="Africa">AUU</option>
+                            <option value="Americas">BDU</option>
+                            <option value="Asia">Jema</option>
+                            <option value="Europe">ASTU</option>
+                            <option value="Oceania">Jema</option>
+                        </select>
+                        <span className="focus"></span>
+                    </div>
+>>>>>>> 8f187c8b097d7cf019c04ee0e06a33be4545e1a8
             <div className="host-vans-list">
                 {
                     vans.length > 0 ? (
@@ -45,6 +66,7 @@ export default function HostVans() {
                     ) : (  <h2>Loading...</h2>  )
                 }
             </div>
+           
         </section>
         
     )
