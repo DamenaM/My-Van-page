@@ -1,1 +1,1 @@
-# Test Api for integeration with hemis
+# Test API for integration with HEMIS
