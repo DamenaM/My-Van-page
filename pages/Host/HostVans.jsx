@@ -9,64 +9,34 @@ export default function HostVans() {
             .then(data => setVans(data.vans))
     }, [])
 
-    const hostVansEls = vans.map(van => (
+    const hostVansEls = vans.map(emp => (
         <Link
-            to={`/host/Graduats/${van.studentNationalId}`}
-            key={van.studentNationalId}
+            to={`/host/Graduats/${emp.studentNationalId}`}
+            key={emp.studentNationalId}
             className="host-van-link-wrapper"
-        >
-            <div className="host-van-single" key={van.studentNationalId}>
-                <img src="../assets/images/user1.png" alt={`Photo of ${van.studentNationalId}`} />
+         >
+            <div className="host-van-single" key={emp.studentNationalId}>
+                <img src="../assets/images/user1.png" alt={`Photo of ${emp.studentNationalId}`} />
                 <div className="host-van-info">
-                <h3>{van.studentFullName}</h3>
-                    <p>score={van.cgpa}</p>
+                <h3>{emp.studentFullName}</h3>
+                    <p>University ={emp.institutionUni}</p>
                 </div>
             </div>
             
         </Link>
     ))
-// newm
-
     return (
-      
-        
-       
-        <section>
-                                
-            <h1 className="host-vans-title">Your listed Alumni </h1>
-<<<<<<< HEAD
-            
-           
-=======
-            <div className="select">
-                        <select
-                            onChange={(e) => {
-                                setFilterParam(e.target.value);
-                            }}
-                            className="custom-select"
-                            aria-label="Filter Countries By Region"
-                        >
-                            <option value="All">Filter By Region</option>
-                            <option value="Africa">AUU</option>
-                            <option value="Americas">BDU</option>
-                            <option value="Asia">Jema</option>
-                            <option value="Europe">ASTU</option>
-                            <option value="Oceania">Jema</option>
-                        </select>
-                        <span className="focus"></span>
-                    </div>
->>>>>>> 8f187c8b097d7cf019c04ee0e06a33be4545e1a8
+     <section>
+            <h1 className="host-vans-title">Click  listed Alumni Detail  </h1>
             <div className="host-vans-list">
                 {
                     vans.length > 0 ? (
                         <section>
                             {hostVansEls}
                         </section>
-
                     ) : (  <h2>Loading...</h2>  )
                 }
             </div>
-           
         </section>
         
     )

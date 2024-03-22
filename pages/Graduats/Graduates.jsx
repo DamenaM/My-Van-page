@@ -1,12 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-
-
 export default function Graduates() {
-
-    
-    
-   
 
     const [vans, setVans] = React.useState([])
     React.useEffect(() => {
@@ -20,14 +14,10 @@ export default function Graduates() {
             ...prevContact,
             isAccredited: !prevContact.isAccredited
         }))
-
     }
  
     const vanElements = vans.map(van => (
 
-
-
-        
         <div key={van.studentNationalId} className="van-tile">
             
             <Link to={`/Graduats/${van.studentNationalId}`}>

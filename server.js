@@ -1,7 +1,6 @@
 import { createServer,  Model } from "miragejs"
 import data from "./data.json";
 
-
 createServer({
     models: {
         vans: Model,
@@ -28,7 +27,7 @@ createServer({
 
         this.get("/host/Graduats", (schema, request) => {
             // Hard-code the hostId for now
-            // return schema.vans.where({ hostId: "123" })
+             //return schema.vans.where({ hostId: "123" })
              return schema.vans.where({ isAccredited: 'true' })
         })
 
@@ -37,5 +36,6 @@ createServer({
             const studentNationalId = request.params.studentNationalId
             return schema.vans.findBy({ studentNationalId })
         })
+       
     }
 })

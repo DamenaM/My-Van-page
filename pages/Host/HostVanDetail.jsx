@@ -30,13 +30,12 @@ export default function HostVanDetail() {
 
             <div className="host-van-detail-layout-container">
                 <div className="host-van-detail">
-                <img src="./Graduats/assets/images/user1.png" />
+                <img src="/assets/images/user1.png" />
                     <div className="host-van-detail-info-text">
-                        <i   className={`van-type van-type-${currentGraduates.isAccredited}`}    >
+                        <i  className={`van-type van-type-${currentGraduates.isAccredited}`}    >
                             {currentGraduates.isAccredited}
                         </i>
                         <h3>{currentGraduates.studentFullName}</h3>
-                        <h4>Graduate Result ={currentGraduates.cgpa}</h4>
                     </div>
                 </div>
 

@@ -7,12 +7,17 @@ export default function Header() {
         textDecoration: "underline",
         color: "#161616"
     }
-    
-    return (
-        <header>
-            <Link className="site-logo" to="/">Graduate employees list </Link>
-            <nav>
-                <NavLink 
+        return (
+        <header className="header">
+            <img   src="./assets/images/CSCNewLog.png" alt="" />
+            <NavLink 
+            
+                    to="/"
+                    style={({isActive}) => isActive ? activeStyles : null}  >
+                    
+                </NavLink>
+            <nav className="headernav" >
+                {/* <NavLink 
                     to="/host"
                     style={({isActive}) => isActive ? activeStyles : null}   >
                     Host
@@ -31,12 +36,17 @@ export default function Header() {
                     to="/GraduatsFilter"
                     style={({isActive}) => isActive ? activeStyles : null}   >
                     GraduatesFilter 
-                </NavLink>
-                <NavLink 
+                </NavLink> */}
+              {/*   <NavLink 
                     to="/SearchBarFilter"
                     style={({isActive}) => isActive ? activeStyles : null}   >
                     SearchBarFilter 
-                </NavLink>
+                </NavLink> */}
+                 {/* <NavLink 
+                    to="/FilterMain"
+                    style={({isActive}) => isActive ? activeStyles : null}   >
+                    FilterMain 
+                </NavLink> */}
             </nav>
         </header>
     )

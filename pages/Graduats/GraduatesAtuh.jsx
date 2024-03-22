@@ -1,9 +1,10 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+import { useParams,Link } from "react-router-dom"
 
-export default function GraduatesDetail() {
+
+export default function GraduatesAtuh() {
     const params = useParams()
-    const [van, setVan] = React.useState(null)
+    const [emp, setVan] = React.useState(null)
 
     React.useEffect(() => {
         fetch(`/api/Graduats/${params.studentNationalId}`)
@@ -13,15 +14,21 @@ export default function GraduatesDetail() {
 
     return (
         <div className="van-detail-container">
-            {van ? (
+            {emp ? (
                 <div className="van-detail">
                     <img src="../assets/images/user1.png" />
-                    <h2>{van.studentFullName}</h2>
-                    <p className="van-price"><span>{van.cgpa}</span></p>
-                    <p>{van.institutionName}</p>
+                    <Link  to=".."   relative="path"    className="back-button"
+                         >&larr; <span>Back to Alumni </span>
+                    </Link>
+                   <ui>
+                    <li className="van-price"><span>Name :- {emp.studentFullName}</span></li>
+                    <li> CGA:-  {emp.cgpa}</li>
+                    <li> {emp.institutionName}</li>
                     <button className="link-button">Need Authenticate</button>
+                   </ui>
                 </div>
             ) : <h2>Loading...</h2>}
         </div>
+        
     )
 }

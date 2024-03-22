@@ -3,24 +3,23 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
+import HostGratuCgpa from "./pages/Host/HostGratuCgpa"
 import Graduates from "./pages/Graduats/Graduates"
-
-import GraduatesDetail from "./pages/Graduats/GraduatesDetail"
-
+import GraduatesAtuh from "./pages/Graduats/GraduatesAtuh"
 import HostVans from "./pages/Host/HostVans"
 import HostVanDetail from "./pages/Host/HostVanDetail"
 import HostVanInfo from "./pages/Host/HostVanInfo"
 import HostGraduatesInst from "./pages/Host/HostGraduatesInst"
-import HostVanPhotos from "./pages/Host/HostVanPhotos"
+import GraduatsPhotos from "./pages/Host/GraduatsPhotos"
 import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
+import GraduatesFilter from './pages/Graduats/Graduatesfilter';
+import SearchBarFilter from './pages/Graduats/SearchBarFilter';
 
-import HostGratuCgpa from "./pages/Host/HostGratuCgpa"
+import FilterMain from './pages/Graduats/FilterMain';
+
 
 import "./server"
-import GraduatesFilter from './pages/Graduats/Graduatesfilter';
-
-
 
 function App() {
   return (
@@ -31,17 +30,17 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="Graduats" element={<Graduates />} />
           <Route path="Graduatsfilter" element={<GraduatesFilter/>} />
-        
-          <Route path="Graduats/:studentNationalId" element={<GraduatesDetail />} />
+          <Route path="SearchBarFilter" element={<SearchBarFilter/>} />
+          <Route path="FilterMain" element={<FilterMain/>} />
           
+          <Route path="Graduats/:studentNationalId" element={<GraduatesAtuh />} />
           <Route path="host" element={<HostLayout />}>
-           
-            <Route path="Graduats" element={<HostVans />} />
-            <Route path="Graduats/:studentNationalId" element={<HostVanDetail />}>
+          <Route path="Graduats" element={<HostVans />} />
+          <Route path="Graduats/:studentNationalId" element={<HostVanDetail />}>
               <Route index element={<HostVanInfo />} />
               <Route path="GratuCGPA" element={<HostGratuCgpa />} />
               <Route path="instName" element={<HostGraduatesInst />} />
-              <Route path="photos" element={<HostVanPhotos />} />
+              <Route path="photos" element={<GraduatsPhotos />} />
             </Route>
           </Route>
         </Route>
